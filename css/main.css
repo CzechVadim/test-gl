@@ -2,26 +2,287 @@
 
 @font-face {
     font-family: "Fixel Text";
-    src: url("../fonts/FixelText-Regular.woff2") format("woff2"),
-         url("../fonts/FixelText-Medium.woff2") format("woff2"), 
-         url("../fonts/FixelText-SemiBold.woff2") format("woff2"),
-         url("../fonts/FixelText-Bold.woff2") format("woff2"),
-         url("../fonts/FixelText-ExtraBold.woff2") format("woff2"),
-         url("../fonts/FixelText-Black.woff2") format("woff2");
+    src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"),
+         url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), 
+         url("../fonts/ProximaNova-Bold.woff2") format("woff2"),
+         url("../fonts/ProximaNova-Extrabld.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 body {
-    font-family: "Fixel Text", Arial, sans-serif;
-    font-size: 60px;
-    font-weight: 400;
-    background-color: brown;
+    background-color: #F1F9FF;
 }
 
-.container {
-    max-width: 1230px;
-    padding: 0 20px; /*top-bottom left-right*/
+/* ========================================= HEADER ========================================= */
+.header__wrapper {
+    max-width: 1210px;
     margin: 0 auto;
+    padding: 30px 20px 130px 20px; /*top right bottom left*/
+    display: flex;
+    flex-direction: column;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo__img {
+    margin-right: 35px;
+}
+
+.header-logo__desc {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #353541;
+    margin-right: 140px;
+}
+
+.header-contacts__item {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+}
+
+.header-contacts__img {
+    margin-right: 6px;
+}
+
+.header-contacts__desc {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #161835;
+    text-decoration: none;
+}
+
+.header-contacts__desc span {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #161835;
+    text-decoration: none;
+}
+
+.personal-btn {
+    position: relative;
+    background-color: #3B8DD0;
+    padding: 20px 25px 20px 45px;
+    border-radius: 100px;
+    border: none;
+    font-family: "Proxima Nova 700", Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.personal-btn:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 13px;
+    height: 19px;
+    background: url(../img/Vector.png) center no-repeat;
+}
+
+.header__menu {
+    margin-top: 15px;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header__item {
+    margin-right: 30px;
+}
+
+.header__link {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #3B8DD0;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.header__link {
+    &:hover, 
+    &:focus {
+        color: #FC0E28;
+        text-decoration: underline;
+    }
+}
+
+/* ========================================= HERO ========================================= */
+.hero {
+    margin: 0px 0px 40px 0px; /*top right bottom left*/
+    background-image: url(../img/Group\ 308.png);
+    height: 560px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom 0% left 80%;
+}
+
+.hero__wrapper {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.hero__subtitle {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: #FC0E28;
+    margin-bottom: 15px;
+}
+
+.hero__title {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 110%;
+    color: #212353;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+.hero__desc {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: #212353;
+    margin-bottom: 45px;
+}
+
+.hero__desc span {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 800;
+}
+
+.detail-btn {
+    padding: 15px 45px;
+    border-radius: 100px;
+    border: none;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #FC0E28;
+}
+
+
+/* ========================================= STATISTIC ========================================= */
+.statistic__wrapper {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0px 20px 210px 20px; /*top right bottom left*/
+    text-align: center;
+}
+
+.statistic__title {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 150%;
+    color: #161835;
+    margin-bottom: 20px;
+}
+
+.statistic__subtitle {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #161835;
+    margin-bottom: 30px;
+}
+
+.statistic__subtitle span {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 800;
+}
+
+.statistic__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.statistic__item {
+    width: 300px;
+    padding: 70px 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.statistic__item-subtitle{
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #FC0E28;
+}
+
+.statistic__item-title {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    color: #161835;
+    margin-bottom: 30px;
+}
+
+.statistic__item-desc {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: #161835;
+}
+
+
+/* ========================================= ABOUT ========================================= */
+.about__wrapper {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0px 20px 210px 20px; /*top right bottom left*/
+    display: flex;
+}
+
+.about__img {
+    margin-right: 30px;
+}
+
+.about__title {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    color: #161835;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.about__desc {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.about__desc span{
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 800;
 }
