@@ -13,6 +13,7 @@
 
 body {
     background-color: #F1F9FF;
+    position: relative;
 }
 
 /* ========================================= HEADER ========================================= */
@@ -69,8 +70,9 @@ body {
 
 .personal-btn {
     position: relative;
+    height: 46px;
     background-color: #3B8DD0;
-    padding: 20px 25px 20px 45px;
+    padding: 15px 25px 15px 45px;
     border-radius: 100px;
     border: none;
     font-family: "Proxima Nova 700", Arial, sans-serif;
@@ -81,7 +83,7 @@ body {
 .personal-btn:after {
     content: '';
     position: absolute;
-    top: 20px;
+    top: 14px;
     left: 25px;
     width: 13px;
     height: 19px;
@@ -123,11 +125,14 @@ body {
 /* ========================================= HERO ========================================= */
 .hero {
     margin: 0px 0px 40px 0px; /*top right bottom left*/
-    background-image: url(../img/Group\ 308.png);
+    position: relative;
     height: 560px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom 0% left 80%;
+}
+
+.hero__img {
+    position: absolute;
+    top: 0;
+    right: -50px;
 }
 
 .hero__wrapper {
@@ -334,10 +339,16 @@ body {
 
 
 /* ========================================= ADVENTAGES ========================================= */
+.reviews {
+    width: 970px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .reviews__wrapper {
     max-width: 970px;
     margin: 0 auto;
-    padding: 0px 20px 150px 20px; /*top right bottom left*/
+    padding: 0px 20px 0px 20px; /*top right bottom left*/
 }
 
 .reviews__title {
@@ -363,80 +374,150 @@ body {
     font-weight: 600;
 }
 
-/* ========================================= SLIDER ========================================= */
-/*.container {
-    width: 970px;
+.slider__rev {
     margin: 0 auto;
-    max-width: 80%;
+    display: flex;
+    align-items: center;
+    min-width: 0;
 }
-  
-.slick-slider {
-    margin-left: -12%;
-    margin-right: -12%;
+
+.slider__rev-img {
+    width: 100px;
 }
-  
+
+/* ========================================= SLIDER ========================================= */
+.slick-track {
+    display: flex;
+}
+
 .slick-list {
-    padding-top: 10%!important;
-    padding-bottom: 10%!important;
-    padding-left: 15%!important;
-    padding-right: 15%!important;
+    overflow: hidden;
+    margin: 0 auto;
 }
-  
-  .slick-dots {
-    text-align: right;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .slick-track {
-    max-width: 100%!important;
-    transform: translate3d(0, 0, 0)!important;
-    perspective: 100px;
-  }
-  
-  .slick-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    opacity: 0;
-    width: 100%!important;
-    transform: translate3d(0, 0, 0);
-    transition: transform 1s, opacity 1s;
-  }
-  
-  .slick-snext,
-  .slick-sprev {
-    display: block;
-  }
-  
-  .slick-current {
-    opacity: 1;
+
+/* ========================================= NEWS ========================================= */
+.news__wrapper {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0px 20px 120px 20px; /*top right bottom left*/
+}
+
+.news__title {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    color: #161835;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.news__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news__item {
+    width: 370px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.news__item:last-of-type {
+    margin-right: 0px;
+}
+
+.content__container {
+    padding: 30px 20px 50px 20px; /*top right bottom left*/
+}
+
+.news__item-title {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 110%;
+    color: #161835;
+    margin-bottom: 15px;
+}
+
+.news__item-date {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FC0E28;
+    margin-bottom: 10px;
+}
+
+.news__item-desc {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    color: #161835;
+}
+
+
+/* ========================================= FOOTER ========================================= */
+.footer__wrapper {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0px 20px 30px 20px; /*top right bottom left*/
+    display: flex;
+}
+
+.footer-logo__desc {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    color: #353541;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.caption__desc {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #161835;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__link-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 80px;
+}
+
+.footer__link {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #161835;
+    text-decoration: none;
+}
+
+.footer__contacts-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 130px;
+}
+
+.footer__personal-link {
     position: relative;
-    display: block;
-    transform: translate3d(0, 0, 20px);
-    z-index: 2;
-  }
-  
-  .slick-snext {
-    opacity: 1;
-    transform: translate3d(20%, 0, 0px);
-    z-index: 1;
-  }
-  
-  .slick-sprev {
-    opacity: 1;
-    transform: translate3d(-20%, 0, 0px);
-  }
-  
-.test {
-    display: block;
-    width: 110px;
-    height: 300px;
-    background: #c00;
-    box-shadow: inset 0px 0px 0px 3px #000
-}*/
+}
+
+.footer__conpany-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
